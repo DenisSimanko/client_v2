@@ -21,8 +21,11 @@ export default {
 </script>
 
 <style lang="scss">
+$orange: rgb(237, 125, 77);
 $border-color: #000;
 body {
   margin: 0;
+  color: #373d3f;
+  // color: #1a1c1a;
 }
 </style>

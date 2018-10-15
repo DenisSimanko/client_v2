@@ -9,9 +9,9 @@ Vue.config.productionTip = false
 Vue.mixin({
   computed: {
     URL() {
-      return process.env.BASE_URL.indexOf('localhost')
-      ? 'http://localhost:8080/'
-      : 'http://pizza365.com.ua/'
+      return process.env.NODE_ENV == 'development' 
+        ? ~window.location.href.indexOf('192.168') ? 'http://192.168.0.102:8080/' : 'http://localhost:8080/' 
+        : process.env.BASE_URL;
     }
   }
 })
